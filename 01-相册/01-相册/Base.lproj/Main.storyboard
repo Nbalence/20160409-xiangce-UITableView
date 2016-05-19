@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amX-ke-lTA">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="667"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.5" maximumZoomScale="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-Pk-WF7" userLabel="FirstScrollView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_feature_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZYG-aw-gG4">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="rIv-sS-CHx" appends="YES" id="dUx-Nj-G6y"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1GB-b9-DY2"/>
+                                        </connections>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.5" maximumZoomScale="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-wf-vwr" userLabel="SecondScrollView">
+                                        <rect key="frame" x="400" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_feature_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="OXd-Re-MHq">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="dbq-wW-Inu" appends="YES" id="Hve-ep-Kg7"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.5" maximumZoomScale="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="tUN-yN-bs4" userLabel="ThirdScrollView">
+                                        <rect key="frame" x="800" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_feature_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="26F-Ck-33I">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="49L-6U-wk1" appends="YES" id="Wwx-dG-C6l"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Vbz-Ls-4kO"/>
+                                        </connections>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PqG-uW-lUK"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="firstScrollView" destination="6SK-Pk-WF7" id="Zat-8A-LVk"/>
+                        <outlet property="scrollView" destination="amX-ke-lTA" id="26t-Xy-nHe"/>
+                        <outlet property="secondScrollView" destination="hIk-wf-vwr" id="eMe-yv-bTk"/>
+                        <outlet property="thirdScrollView" destination="tUN-yN-bs4" id="nbw-1D-nc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="rIv-sS-CHx">
+                    <connections>
+                        <action selector="doubleClick:" destination="BYZ-38-t0r" id="uw8-Xj-iVj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="dbq-wW-Inu">
+                    <connections>
+                        <action selector="doubleClick:" destination="BYZ-38-t0r" id="3Gd-Cm-beL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="49L-6U-wk1">
+                    <connections>
+                        <action selector="doubleClick:" destination="BYZ-38-t0r" id="92v-n5-FxI"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="568.5" y="479.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="new_feature_1.png" width="320" height="568"/>
+        <image name="new_feature_2.png" width="320" height="568"/>
+        <image name="new_feature_3.png" width="320" height="568"/>
+    </resources>
+</document>
